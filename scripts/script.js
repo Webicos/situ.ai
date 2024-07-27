@@ -112,7 +112,7 @@ consultaButton.addEventListener('click', () => {
 
       cadastradoCNPJ.innerText = consultadoCNPJ.innerText = response.estabelecimento.cnpj;
       
-      consultadoRazaoSocial.innerText = consultadoRazaoSocial.innerTex = response.razao_social;
+      cadastradoRazaoSocial.innerText = consultadoRazaoSocial.innerTex = response.razao_social;
       
       cadastradoSituacao.innerText = obterStatusAleatorio();
       consultadoSituacao.innerText = response.estabelecimento.situacao_cadastral;
