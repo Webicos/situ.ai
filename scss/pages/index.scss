@@ -67,9 +67,13 @@
     align-items: center;
     row-gap: to-rem(32);
 
+    button {
+      width: 100%;
+    }
+
     img {
       max-height: to-rem(32);
       width: auto;
     }
-  } 
+  }
 }
