@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.min.css">
+  <title>Situ.Ai</title>
+</head>
+<body class="consulta-ativa">
+
+  <section class="form-overlay consulta-ativa">
+    <div class="container">
+      <img src="assets/situai-logo.svg" alt="Situ.Ai logo">
+
+      <label for="consultaCNPJ">Consulte um CNPJ</label>
+      <input type="text" name="consultaCNPJ" id="consultaInput" maxlength="18">
+      <span id="erro">mensagem de erro</span>
+      <button class="button disabled" id="consultaButton">Consultar CNPJ</button>
+      
+      <div id="loader-box">
+        <div id="loader"></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container">
+      <div class="box-item">
+        <h2 class="box-item__titulo">Dado Cadastrado (Empresa)</h2>
+        <ul class="box-item__container purple-container">
+          <li class="item-resultado">
+            <h3>CPNJ da Empresa</h3>
+            <p id="cadastrado-cnpj">0000</p>
+          </li>
+          <li class="item-resultado">
+            <h3>Razão social</h3>
+            <p id="cadastrado-razao_social">0000</p>
+          </li>
+          <li class="item-resultado">
+            <h3>Capital Social</h3>
+            <p id="cadastrado-capital_social">0000</p>
+          </li>
+          <li class="item-resultado">
+            <h3>Situação cadastral</h3>
+            <p id="cadastrado-situacao_cadastral">0000</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="box-item">
+        <h2 class="box-item__titulo">Resultado da Consulta</h2>
+        <ul class="box-item__container purple-container">
+          <li class="item-resultado">
+            <h3>CPNJ da Empresa</h3>
+            <p id="consultado-cnpj">0000</p>
+          </li>
+          <li class="item-resultado">
+            <h3>Razão social</h3>
+            <p id="consultado-razao_social">0000</p>
+          </li>
+          <li class="item-resultado">
+            <h3>Capital Social</h3>
+            <p id="consultado-capital_social">0000</p>
+          </li>
+          <li class="item-resultado">
+            <h3>Situação cadastral</h3>
+            <p id="consultado-situacao_cadastral">0000</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <section class="outra-consulta container">
+    <div class="container-interno purple-container">
+      <img src="assets/situai-logo.svg" alt="Situ.Ai logo">
+
+      <button class="button" id="consultar-novamente">Consultar CNPJ </button>
+    </div>
+  </section>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

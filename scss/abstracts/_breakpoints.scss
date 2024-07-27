@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "sass:math";
+
+$breakpoints: (
+    "small": math.div(576, 16) * 1rem, //breakpoint: 576px
+    "medium": math.div(768, 16) * 1rem, //breakpoint: 768px
+    "desktop-small": math.div(1024, 16) * 1rem, //breakpoint: 1024px
+    "desktop": math.div(1200, 16) * 1rem //breakpoint: 1200px
+);
+
+@mixin media-min($size){
+    $point: map.get($breakpoints, $size);
+
+    @if $point {
+        @media only screen and (min-width: $point){
+            @content;
+        }
+    }@else {
+        @media only screen and (min-width: $size){
+            @content;
+        }
+    }
+}
